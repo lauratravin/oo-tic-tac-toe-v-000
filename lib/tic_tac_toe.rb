@@ -123,5 +123,17 @@ def winner
  end
 end
 
+def play
+  while !over?  #until the game is over--> take turns
+     turn
+  end
+
+  if won? != false
+    puts "Congratulations #{winner}!"
+  elsif draw?
+    puts "Cat's Game!"
+  else
+  end
+end
 
 end#class
