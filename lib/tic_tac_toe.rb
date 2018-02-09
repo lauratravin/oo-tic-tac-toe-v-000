@@ -35,4 +35,9 @@ def move(index,value = "X")
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 end
 
+def position_taken?(index)
+  @board[index] != " " && @board[index] != ""
+end
+
+
 end#class
