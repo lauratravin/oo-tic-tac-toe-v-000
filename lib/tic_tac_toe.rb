@@ -12,7 +12,8 @@ def initialize(board = nil)
   else
     @board = board
   end
-
-
 end
+
+
+
 end
