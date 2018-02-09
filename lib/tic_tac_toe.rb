@@ -50,7 +50,6 @@ def turn
   if valid_move?(index)
        move(index, current_player)
   else
-      puts "Invalid move."
       turn
   end
 end
