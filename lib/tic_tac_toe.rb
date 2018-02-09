@@ -78,4 +78,50 @@ def turn
   end
 end
 
+
+
+def won?
+  WIN_COMBINATIONS.each do |combwin|
+     if @board[combwin[0]] == "X" && @board[combwin[1]] == "X" && @board[combwin[2]]  == "X"
+       return combwin
+     end
+
+     if @board[combwin[0]] == "O" && @board[combwin[1]] == "O" && @board[combwin[2]]  == "O"
+       return combwin
+     end
+  end
+  return false
+end
+
+def full?
+  total = @board.all? do |value|
+    value == "X" || value == "O"
+  end
+  return total
+end
+
+def draw?
+    if full? == true && won? == false
+      return true
+    end
+end
+
+def over?
+  if won?
+    return true
+  elsif  draw? == true
+   return true
+ else
+    return false
+ end
+end
+
+def winner
+  if won? != false
+  matrix = won?
+ return @board[matrix[0]]
+ end
+end
+
+
 end#class
